@@ -11,6 +11,12 @@ uint8_t	  OneWireDevices;
 uint8_t 	TempSensorCount=0; 
 uint8_t		Ds18b20StartConvert=0;
 uint16_t	Ds18b20Timeout=0;
+uint8_t	m_init=0;
+
+uint8_t is_init (){
+
+	return m_init;
+}
 #if (_DS18B20_USE_FREERTOS==1)
 osThreadId 	Ds18b20Handle;
 void Task_Ds18b20(void const * argument);
@@ -54,6 +60,7 @@ bool	Ds18b20_Init(void)
 		Ds18b20Delay(50);
     DS18B20_DisableAlarmTemperature(&OneWire,  ds18b20[i].Address);
   }
+	m_init = 1;
 	return true;
 }
 #endif

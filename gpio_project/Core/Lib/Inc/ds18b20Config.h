@@ -2,9 +2,8 @@
 #define	_DS18B20CONFIG_H
 
 #include "main.h"
-
-
 extern TIM_HandleTypeDef htim2;
+
 //	Init timer on cube    1us per tick				example 72 MHz cpu >>> Prescaler=(72-1)      counter period=Max 
 //###################################################################################
 #define	_DS18B20_USE_FREERTOS		    				0

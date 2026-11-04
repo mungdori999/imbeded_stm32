@@ -79,7 +79,7 @@ uint8_t 	DS18B20_DisableAlarmTemperature(OneWire_t* OneWireStruct, uint8_t* ROM)
 uint8_t 	DS18B20_AlarmSearch(OneWire_t* OneWireStruct);
 uint8_t 	DS18B20_AllDone(OneWire_t* OneWireStruct);
 //###################################################################################
-
+uint8_t is_init ();
  
 #endif
 
